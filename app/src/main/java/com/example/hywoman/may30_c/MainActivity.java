@@ -11,6 +11,18 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
+
+import android.app.Activity;
+import android.content.Context;
+import android.os.Bundle;
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
+import android.*;
+
+import org.w3c.dom.Text;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -38,10 +50,58 @@ public class MainActivity extends AppCompatActivity {
                 startActivity( intent);
             }
         });
+
+        Button mBtn2 = (Button) findViewById(R.id.tB1);
+
+        mBtn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SubActivity.class);
+                startActivity( intent);
+            }
+        });
+
+        Button mBtn3 = (Button) findViewById(R.id.sw1);
+
+        mBtn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SubActivity.class);
+                startActivity( intent);
+            }
+        });
+
+//        TextView mBtn4 = (Text) findViewById(R.id.t1);
+//
+//        mBtn4.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(MainActivity.this, SubActivity.class);
+//                startActivity( intent);
+//            }
+//        });
+//
+//        Text mBtn5 = (Text) findViewById(R.id.t2);
+//
+//        mBtn5.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(MainActivity.this, SubActivity.class);
+//                startActivity( intent);
+//            }
+//        });
+
+        Button mBtn6 = (Button) findViewById(R.id.button222);
+
+        mBtn6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SubActivity.class);
+                startActivity( intent);
+            }
+        });
+
     }
-
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -64,4 +124,38 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+}
+
+public class TouchListener implements TouchListener.OnTouchListener {
+    public class E_HandleEvent4Activity extends Activity {
+
+        @Override
+        public void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            TouchListener v = new TouchListener();
+            v.setOnTouchListener(v);
+            setContentView(0);
+        }
+
+        protected class TouchListener2 extends View implements TouchListener.OnTouchListener {
+            public TouchListener2(Context context) {
+                super(context);
+            }
+
+        public boolean onTouch(View v, MotionEvent event) {
+            if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                Toast.makeText(E_HandleEvent4Activity.this, "터치", Toast.LENGTH_SHORT).show();
+                return true;
+            }
+            return false;
+        }
+
+        }
+    }
+}
+
+void setOnFocusChangeListener(View.OnFocusChangeListener) {
+
+    void onFocusChange(View v, boolean hasFocus);
+
 }

@@ -9,20 +9,60 @@
     tools:showIn="@layout/activity_main">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/t1"
+        android:layout_width="379dp"
+        android:layout_height="154dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        android:text="2+10/2=7 은 맞는 수식일까요?"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/tB1"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.045" />
 
     <Button
         android:id="@+id/button111"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="정답!"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteY="113dp" />
+
+    <ToggleButton
+        android:id="@+id/tB1"
+        android:layout_width="193dp"
+        android:layout_height="49dp"
+        android:text="ToggleButton"
+        tools:layout_editor_absoluteX="104dp"
+        tools:layout_editor_absoluteY="461dp" />
+
+    <Switch
+        android:id="@+id/sw1"
+        android:layout_width="234dp"
+        android:layout_height="29dp"
+        android:text="Switch"
+        tools:layout_editor_absoluteX="75dp"
+        tools:layout_editor_absoluteY="417dp" />
+
+    <Button
+        android:id="@+id/button222"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="오답!"
+        tools:layout_editor_absoluteX="280dp"
+        tools:layout_editor_absoluteY="113dp" />
+
+    <TextView
+        android:id="@+id/t2"
+        android:layout_width="349dp"
+        android:layout_height="207dp"
+        android:text="다른 기능을 사용하려면 토글 버튼을 오른쪽으로 이동시켜주세요.          종료하시려면 off를 눌러주세요."
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="202dp" />
 
 </android.support.constraint.ConstraintLayout>
