@@ -1,5 +1,5 @@
 package com.example.hywoman.may30_c;
-// 정보경영과 C반 216230110 곽은지 과제제출
+// 0614 정보경영과 C반 216230110 곽은지 과제제출
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
